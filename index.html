@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía para Crear la Identidad de tu Empresa</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #5a7d9a;
+            --accent: #8b4513;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --success: #495057;
+            --text: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: var(--text);
+            line-height: 1.7;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--accent);
+        }
+        
+        h1 {
+            font-size: 2.3rem;
+            margin-bottom: 15px;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+            font-style: italic;
+        }
+        
+        .phases {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px 0 30px;
+            gap: 10px;
+        }
+        
+        .phase-btn {
+            background-color: white;
+            color: var(--primary);
+            border: 1px solid #ddd;
+            padding: 12px 25px;
+            border-radius: 3px;
+            font-weight: normal;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .phase-btn:hover {
+            background-color: #e9ecef;
+        }
+        
+        .phase-btn.active {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .content-section {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            padding: 35px;
+            margin-bottom: 30px;
+            display: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        h2 {
+            color: var(--primary);
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 12px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+            font-size: 1.8rem;
+        }
+        
+        h2 i {
+            margin-right: 12px;
+            font-size: 1.5rem;
+        }
+        
+        .tip-box {
+            background-color: #f8f9fa;
+            border-left: 3px solid var(--secondary);
+            padding: 20px;
+            margin: 25px 0;
+        }
+        
+        .activity-box {
+            background-color: #f0f4f8;
+            border-left: 3px solid var(--accent);
+            padding: 20px;
+            margin: 25px 0;
+        }
+        
+        h3 {
+            color: var(--dark);
+            margin: 20px 0 12px;
+            font-size: 1.3rem;
+            font-weight: normal;
+        }
+        
+        h4 {
+            color: var(--dark);
+            margin: 18px 0 10px;
+            font-size: 1.1rem;
+        }
+        
+        ul, ol {
+            padding-left: 22px;
+            margin: 12px 0;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .color-box {
+            height: 100px;
+            border-radius: 3px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .color-name {
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+        
+        .color-meaning {
+            font-size: 0.8rem;
+            font-weight: normal;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+            color: var(--dark);
+            font-size: 0.9rem;
+            border-top: 1px solid #e0e0e0;
+            background-color: white;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .phase-btn {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .content-section {
+                padding: 25px;
+            }
+            
+            .color-palette {
+                grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Guía para Crear la Identidad de tu Empresa</h1>
+            <p class="subtitle">Consejos prácticos para desarrollar una identidad corporativa coherente y efectiva</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="phases">
+            <button class="phase-btn active" data-target="phase1">Fase 1: Nombre</button>
+            <button class="phase-btn" data-target="phase2">Fase 2: Logo</button>
+            <button class="phase-btn" data-target="phase3">Fase 3: Slogan & QR</button>
+            <button class="phase-btn" data-target="final-tips">Consejos Finales</button>
+        </div>
+        
+        <section id="phase1" class="content-section active">
+            <h2><i>📛</i> Fase 1: El Nombre de la Empresa</h2>
+            <p>El nombre es el primer elemento de identidad que conocerán tus clientes. Debe ser memorable y reflejar la esencia de tu negocio.</p>
+            
+            <div class="tip-box">
+                <h3>Consideraciones importantes:</h3>
+                <ol>
+                    <li><strong>Claridad versus creatividad:</strong>
+                        <ul>
+                            <li><strong>Enfoque descriptivo:</strong> ¿El nombre comunica claramente qué hace la empresa? (Ej: "Panadería La Tradición").</li>
+                            <li><strong>Enfoque conceptual:</strong> ¿El nombre evoca sensaciones o conceptos abstractos? (Ej: "Amazonas" para una empresa de aventuras).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Facilidad de memorización y pronunciación:</strong>
+                        <ul>
+                            <li>¿Es suficientemente corto y fácil de recordar?</li>
+                            <li>Pruébalo en voz alta. ¿Suena bien? ¿Es fácil de pronunciar para diferentes personas?</li>
+                        </ul>
+                    </li>
+                    <li><strong>Verificación de disponibilidad:</strong>
+                        <ul>
+                            <li>Investiga en registros comerciales y redes sociales para asegurarte de que el nombre no esté siendo utilizado.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Adecuación al público objetivo:</strong>
+                        <ul>
+                            <li>¿El nombre resuena con tu audiencia objetivo? Un nombre para una empresa tecnológica será diferente al de una artesanal.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            
+            <div class="activity-box">
+                <h3>Ejercicio práctico:</h3>
+                <p>Realiza una lluvia de ideas escribiendo todas las palabras relacionadas con tu negocio (productos, valores, emociones). Combínalas, acórtalas o utiliza sinónimos. Selecciona tus 3 opciones favoritas y evalúa cuál transmite mejor tu propuesta de valor.</p>
+            </div>
+        </section>
+        
+        <section id="phase2" class="content-section">
+            <h2><i>🎨</i> Fase 2: El Diseño del Logo</h2>
+            <p>El logo es la representación visual de tu marca. Debe ser reconocible y funcionar en diferentes contextos y tamaños.</p>
+            
+            <div class="tip-box">
+                <h3>Aspectos clave a considerar:</h3>
+                <ol>
+                    <li><strong>Simplicidad:</strong> Los logos más efectivos suelen ser simples y fáciles de comprender rápidamente. Evita diseños sobrecargados con elementos innecesarios.</li>
+                    <li><strong>Conexión con la identidad:</strong>
+                        <ul>
+                            <li>¿Puedes integrar elementos del nombre de forma creativa?</li>
+                            <li>¿Puedes utilizar un símbolo que represente tus productos, servicios o valores?</li>
+                        </ul>
+                    </li>
+                    <li><strong>Psicología del color:</strong>
+                        <p>Selecciona una paleta de 1 a 3 colores principales. Recuerda que tu logo debe funcionar también en blanco y negro.</p>
+                        <div class="color-palette">
+                            <div class="color-box" style="background-color: #2c3e50;">
+                                <div class="color-name">Azul Marino</div>
+                                <div class="color-meaning">Profesionalismo, confianza</div>
+                            </div>
+                            <div class="color-box" style="background-color: #c0392b;">
+                                <div class="color-name">Rojo intenso</div>
+                                <div class="color-meaning">Energía, pasión</div>
+                            </div>
+                            <div class="color-box" style="background-color: #27ae60;">
+                                <div class="color-name">Verde esmeralda</div>
+                                <div class="color-meaning">Crecimiento, naturalidad</div>
+                            </div>
+                            <div class="color-box" style="background-color: #f39c12;">
+                                <div class="color-name">Naranja</div>
+                                <div class="color-meaning">Creatividad, entusiasmo</div>
+                            </div>
+                            <div class="color-box" style="background-color: #8e44ad;">
+                                <div class="color-name">Púrpura</div>
+                                <div class="color-meaning">Sabiduría, lujo</div>
+                            </div>
+                            <div class="color-box" style="background-color: #16a085;">
+                                <div class="color-name">Verde azulado</div>
+                                <div class="color-meaning">Frescura, tranquilidad</div>
+                            </div>
+                            <div class="color-box" style="background-color: #d35400;">
+                                <div class="color-name">Naranja oscuro</div>
+                                <div class="color-meaning">Calidez, amigabilidad</div>
+                            </div>
+                            <div class="color-box" style="background-color: #2980b9;">
+                                <div class="color-name">Azul cielo</div>
+                                <div class="color-meaning">Serenidad, confianza</div>
+                            </div>
+                            <div class="color-box" style="background-color: #f1c40f;">
+                                <div class="color-name">Amarillo dorado</div>
+                                <div class="color-meaning">Optimismo, riqueza</div>
+                            </div>
+                            <div class="color-box" style="background-color: #7f8c8d;">
+                                <div class="color-name">Gris azulado</div>
+                                <div class="color-meaning">Equilibrio, formalidad</div>
+                            </div>
+                            <div class="color-box" style="background-color: #2c3e50; color: #f1c40f;">
+                                <div class="color-name">Amarillo sobre azul</div>
+                                <div class="color-meaning">Contraste, visibilidad</div>
+                            </div>
+                            <div class="color-box" style="background-color: #34495e;">
+                                <div class="color-name">Gris oscuro</div>
+                                <div class="color-meaning">Elegancia, sofisticación</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><strong>Tipografía:</strong> Si tu logo incluye texto, selecciona una tipografía que refleje la personalidad de tu marca: seria, moderna, clásica o innovadora.</li>
+                </ol>
+            </div>
+            
+            <div class="activity-box">
+                <h3>Ejercicio práctico:</h3>
+                <p>Realiza al menos 5-10 bocetos preliminares en papel. Experimenta con formas básicas y composiciones simples. Posteriormente, selecciona el concepto más sólido y desarrolla versiones refinadas.</p>
+            </div>
+        </section>
+        
+        <section id="phase3" class="content-section">
+            <h2><i>💬</i> Fase 3: Slogan y Código QR</h2>
+            
+            <h3>A. El Slogan (La propuesta de valor)</h3>
+            <p>Es una frase concisa que comunica el beneficio principal o la esencia de tu empresa.</p>
+            
+            <div class="tip-box">
+                <h4>Directrices para un slogan efectivo:</h4>
+                <ol>
+                    <li><strong>Brevidad y memorabilidad:</strong> Debe ser fácil de recordar y repetir.</li>
+                    <li><strong>Comunicación de valor:</strong> Responde a la pregunta: "¿Qué beneficio obtiene el cliente al elegirnos?".
+                        <ul>
+                            <li><em>Ejemplo descriptivo:</em> "La excelencia en cada detalle" para una empresa de calidad.</li>
+                            <li><em>Ejemplo diferencial:</em> "Innovación que transforma" para una empresa tecnológica.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Coherencia con la identidad:</strong> El slogan debe reforzar y complementar el nombre y los valores de la marca.</li>
+                </ol>
+            </div>
+            
+            <div class="activity-box">
+                <h4>Ejercicio para desarrollar el slogan:</h4>
+                <p>Completa la frase: "Nuestra empresa se distingue por..." o "Creemos firmemente en...". Reformula esta idea hasta conseguir una expresión breve y poderosa.</p>
+            </div>
+            
+            <h3>B. El Código QR (Conectando con el mundo digital)</h3>
+            <p>Este elemento permite un acceso inmediato a información adicional mediante el escaneo con dispositivos móviles.</p>
+            
+            <div class="tip-box">
+                <h4>Consideraciones técnicas:</h4>
+                <ol>
+                    <li><strong>Destino del código:</strong> Define un destino relevante:
+                        <ul>
+                            <li><strong>Opción recomendada:</strong> Perfil corporativo en redes sociales.</li>
+                            <li><strong>Otras alternativas:</strong> Sitio web, catálogo digital, formulario de contacto.</li>
+                            <li><em>Nota:</em> Configura los destinos digitales antes de generar el código QR.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Personalización:</strong>
+                        <ul>
+                            <li>Utiliza generadores de QR que permitan ajustar colores para armonizar con tu identidad visual.</li>
+                            <li>Mantén un margen adecuado alrededor del código para garantizar su legibilidad.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Verificación funcional:</strong>
+                        <ul>
+                            <li>Prueba el código con diferentes dispositivos y aplicaciones antes de su implementación.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            
+            <div class="activity-box">
+                <h4>Ejercicio práctico:</h4>
+                <p>Selecciona el destino digital principal. Utiliza un generador de códigos QR en línea para crear tu código, personalízalo según tu paleta de colores y verifica su funcionamiento con al menos tres dispositivos diferentes.</p>
+            </div>
+        </section>
+        
+        <section id="final-tips" class="content-section">
+            <h2><i>💡</i> Consideraciones Finales</h2>
+            
+            <div class="tip-box">
+                <h3>Coherencia visual y conceptual</h3>
+                <p>Todos los elementos de identidad deben trabajar de forma armónica para comunicar un mensaje unificado. Realiza una revisión final para asegurar la consistencia entre nombre, logo, colores y slogan.</p>
+                
+                <h3>Lista de verificación integral</h3>
+                <ul>
+                    <li>✅ El nombre es apropiado para el sector y público objetivo</li>
+                    <li>✅ El diseño del logo es escalable y reconocible</li>
+                    <li>✅ La paleta cromática refleja los valores de la empresa</li>
+                    <li>✅ El slogan comunica claramente la propuesta de valor</li>
+                    <li>✅ El código QR funciona correctamente y dirige a contenido relevante</li>
+                    <li>✅ Existe coherencia visual y conceptual entre todos los elementos</li>
+                </ul>
+            </div>
+            
+            <div class="activity-box">
+                <h3>Próximos pasos</h3>
+                <p>Con estos elementos desarrollados, tienes las bases para construir una identidad corporativa sólida. Recuerda que la consistencia en la aplicación de estos elementos es fundamental para construir reconocimiento de marca.</p>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Guía para el desarrollo de identidad corporativa - Material educativo</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navegación entre fases
+        document.addEventListener('DOMContentLoaded', function() {
+            const phaseButtons = document.querySelectorAll('.phase-btn');
+            const contentSections = document.querySelectorAll('.content-section');
+            
+            phaseButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetId = this.getAttribute('data-target');
+                    
+                    // Remover clase active de todos los botones y secciones
+                    phaseButtons.forEach(btn => btn.classList.remove('active'));
+                    contentSections.forEach(section => section.classList.remove('active'));
+                    
+                    // Agregar clase active al botón clickeado y a la sección correspondiente
+                    this.classList.add('active');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
